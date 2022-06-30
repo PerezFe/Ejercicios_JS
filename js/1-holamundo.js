@@ -20,13 +20,16 @@ lineas */
 
 //alert ("un mensaje");
 
-document.write("Hello World");
-document.write("<br>"+  (3+5));
+//document.write("Hello World");
+//cument.write("<br>"+  (3+5));
 
 //var userName = prompt("Cual es tu nombre?");
 //alert("Hola " + userName)
 
-parseInt, x = +prompt("Escribe un numero");
-parseInt, y = +prompt("Escribe otro numero");
-alert ("La suma es " + (x+y));
+//parseInt, x = +prompt("Escribe un numero");
+//parseInt, y = +prompt("Escribe otro numero");
+//alert ("La suma es " + (x+y));
 
+//ejemplo de constante
+const url = "https://developer.mozilla.org/"
+document.write(url)
