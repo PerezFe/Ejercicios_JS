@@ -1,12 +1,54 @@
-let frase = prompt("Ingrese una frase");
-console.log(frase);
-console.log(frase.length)
-console.log(frase.charAt(0))
-console.log(frase.charAt(frase.length-1))
-console.log(frase.toLowerCase())
+//ingresar la frase
+//contar cuantas letras que tiene
+//recorrer la frase
+    //comprobar que la letra sea vocal
+    // en caso de ser vocal sumar contador
 
-frase = frase.toLowerCase();
+let fraseInicial = prompt("Ingrese una frase");
+let cVocales = contadorVocales(fraseInicial)
 
-if(frase.charAt(0) === "a" || frase.charAt(0) === "e" || frase.charAt(0) === "i"|| frase.charAt(0) === "o" || frase.charAt(0) === "u"){
-    document.write(frase.charAt(0));
+
+
+
+document.write("Tu palabra es: \"" + fraseInicial + "\"<br>")
+document.write("El numero de vocales es " + cVocales)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+function esVocal(letra){
+    result = false;
+    switch(letra){
+        case 'a':
+            result=true
+            break
+        case 'e':
+            result=true
+            break
+        case 'i':
+            result=true
+            break
+        case 'o':
+            result=true
+            break
+        case 'u':
+            result=true
+            break
+    }
+    return result;
 }
+
+
+function contadorVocales(frase){
+    frase = frase.toLowerCase();
+    let cantidadLetras = frase.length
+    let cVocales = 0
+    for(let i=0; i < cantidadLetras; i++ ){
+        let flag = esVocal(frase[i]);
+        if(flag){
+            cVocales++
+        }
+    }
+    return cVocales;
+}
+
+
